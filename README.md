@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/projectdiscovery/cloudlist/blob/main/static/cloudlist-logo.png" alt="cloudlist" width="200px"></a>
+  <img src="https://github.com/projectdiscovery/cloudlist/blob/main/static/cloudlist-logo.png" alt="cloudlist" width="200px">
   <br>
 </h1>
 
@@ -10,7 +10,7 @@
 Example Usage
 -----
 
-**GitHub Action running cloudlist**
+**GitHub Action running `cloudlist`**
 
 ```yaml
       - name: 🌥 Cloudlist - List them all
@@ -19,7 +19,7 @@ Example Usage
           config: cloudlist-config.yaml
 ```
 
-**Example workflow** - `.github/workflows/cloudlist.yml`
+**Example workflow**: `.github/workflows/cloudlist.yml`
 
 
 ```yaml
@@ -34,10 +34,10 @@ jobs:
   cloudlist-scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
         with:
-          go-version: 1.15
+          go-version: 1.17
 
       - name: 🌥 Cloudlist - List them all
         uses: projectdiscovery/cloudlist-action@main
@@ -50,7 +50,7 @@ Available Inputs
 ------
 
 | Key      | Description                           | Required |
-| -------- | ------------------------------------- | -------- |
+|----------|---------------------------------------|----------|
 | `config` | Config file to use with cloudlist     | true     |
 | `output` | File to save output result            | false    |
 | `json`   | Format to save of output file         | false    |
